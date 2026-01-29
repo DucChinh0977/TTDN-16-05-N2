@@ -94,5 +94,6 @@ Truy cập trình duyệt:
 ## POSTER:
 
 <p align="center">
-  <img src="/Slide1.png" width="800"/>
+  <img src="/Slide1.PNG" width="800"/>
 </p>
+
