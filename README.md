@@ -23,7 +23,7 @@ Phục vụ mục đích **học tập – đồ án học phần – thực t�
 
 ---
 
-## 1️⃣ Cài đặt môi trường & công cụ
+## 1️ Cài đặt môi trường & công cụ
 
 ### 1.1. Clone project từ GitHub
 
@@ -48,7 +48,7 @@ Cài đặt thư viện Python:
 
 pip install -r requirements.txt
 
-## 2️⃣ Thiết lập cơ sở dữ liệu PostgreSQL
+## 2️ Thiết lập cơ sở dữ liệu PostgreSQL
 ### 2.1. Chạy PostgreSQL bằng Docker
 docker-compose up -d
 
@@ -56,7 +56,7 @@ Kiểm tra container:
 
 docker ps
 
-## 3️⃣ Cấu hình Odoo
+## 3️ Cấu hình Odoo
 ### 3.1. Tạo file odoo.conf
 
 Tạo file odoo.conf tại thư mục gốc:
@@ -75,7 +75,7 @@ xmlrpc_port = 8069
 -u <tên_module>              # Update module
 --dev=all                    # Bật developer mode
 
-## 4️⃣ Chạy hệ thống
+## 4️ Chạy hệ thống
 source venv/bin/activate
 python odoo-bin -c odoo.conf
 
@@ -83,7 +83,7 @@ Truy cập trình duyệt:
 
 👉 http://localhost:8069
 
-## 5️⃣ Các module chính
+## 5️ Các module chính
 
 📦 quan_ly_nhan_su – Quản lý nhân viên
 
@@ -91,9 +91,10 @@ Truy cập trình duyệt:
 
 📦 quan_ly_khach_hang – Quản lý khách hàng
 
-## POSTER:
+## 6 POSTER:
 
 <p align="center">
   <img src="/Slide1.PNG" width="800"/>
 </p>
 
+## END.
