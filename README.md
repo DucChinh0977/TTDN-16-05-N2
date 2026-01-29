@@ -1,5 +1,10 @@
+<p align="center">
 # 📌 HỆ THỐNG QUẢN LÝ DOANH NGHIỆP TRÊN ODOO  
+</p>
+
+<p align="center">
 **(Quản lý Nhân sự – Quản lý Công việc – Quản lý Khách hàng)**
+</p>
 
 <p align="center">
   <img src="https://img.shields.io/badge/Ubuntu-22.04-E95420?style=for-the-badge&logo=ubuntu&logoColor=white" />
@@ -102,6 +107,7 @@ Truy cập trình duyệt:
 </p>
 
 ## END.
+
 
 
 
