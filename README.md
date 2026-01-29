@@ -1,72 +1,94 @@
+# 📌 HỆ THỐNG QUẢN LÝ DOANH NGHIỆP TRÊN ODOO  
+**(Quản lý Nhân sự – Quản lý Công việc – Quản lý Khách hàng)**
+
+![Ubuntu](https://img.shields.io/badge/Ubuntu-22.04-E95420?style=for-the-badge&logo=ubuntu&logoColor=white)
+![GitHub](https://img.shields.io/badge/github-%23181717.svg?style=for-the-badge&logo=github&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-14-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)
+
+![Python](https://img.shields.io/badge/python-3.10+-blue.svg)
+![Odoo](https://img.shields.io/badge/Odoo-15%2F16-purple.svg)
+
 ---
-![Ubuntu](https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white)
-![GitLab](https://img.shields.io/badge/gitlab-%23181717.svg?style=for-the-badge&logo=gitlab&logoColor=white)
-![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)
 
-![Python](https://img.shields.io/badge/python-v3.8+-blue.svg)
-[![security: bandit](https://img.shields.io/badge/security-bandit-yellow.svg)](https://github.com/PyCQA/bandit)
+## 📖 Giới thiệu
 
+Dự án được xây dựng trên nền tảng **Odoo**, nhằm mục tiêu phát triển một hệ thống quản lý doanh nghiệp bao gồm:
 
+- 👤 **Quản lý Nhân sự**
+- 📋 **Quản lý Công việc / Dự án**
+- 🤝 **Quản lý Khách hàng**
+- 📊 Theo dõi tiến độ, nhật ký công việc, đánh giá nhân viên
 
+Phục vụ mục đích **học tập – đồ án học phần – thực tập doanh nghiệp**.
 
-# 1. Cài đặt công cụ, môi trường và các thư viện cần thiết
+---
 
-## 1.1. Clone project.
-git clone https://gitlab.com/anhlta/odoo-fitdnu.git
-git checkout 
+## 1️⃣ Cài đặt môi trường & công cụ
 
-## 1.2. cài đặt các thư viện cần thiết
+### 1.1. Clone project từ GitHub
 
-Người sử dụng thực thi các lệnh sau đề cài đặt các thư viện cần thiết
-
+```bash
+git clone https://github.com/DucChinh0977/TTDN-16-05-N2.git
+cd TTDN-16-05-N2
 ```
-sudo apt-get install libxml2-dev libxslt-dev libldap2-dev libsasl2-dev libssl-dev python3.10-distutils python3.10-dev build-essential libssl-dev libffi-dev zlib1g-dev python3.10-venv libpq-dev
-```
-## 1.3. khởi tạo môi trường ảo.
 
-`python3.10 -m venv ./venv`
-Thay đổi trình thông dịch sang môi trường ảo và chạy requirements.txt để cài đặt tiếp các thư viện được yêu cầu
+### 1.2. Cài đặt thư viện hệ thống (Ubuntu 22.04)
+sudo apt update
+sudo apt install -y \
+    git python3.10 python3.10-dev python3.10-venv \
+    build-essential libssl-dev libffi-dev \
+    libxml2-dev libxslt1-dev libldap2-dev \
+    libsasl2-dev libpq-dev zlib1g-dev
 
-```
+### 1.3. Khởi tạo môi trường ảo Python
+python3.10 -m venv venv
 source venv/bin/activate
-pip3 install -r requirements.txt
-```
 
-# 2. Setup database
+Cài đặt thư viện Python:
 
-Khởi tạo database trên docker bằng việc thực thi file dockercompose.yml.
+pip install -r requirements.txt
 
-`docker-compose up -d`
+## 2️⃣ Thiết lập cơ sở dữ liệu PostgreSQL
+### 2.1. Chạy PostgreSQL bằng Docker
+docker-compose up -d
 
-# 3. Setup tham số chạy cho hệ thống
+Kiểm tra container:
 
-## 3.1. Khởi tạo odoo.conf
+docker ps
 
-Tạo tệp **odoo.conf** có nội dung như sau:
+## 3️⃣ Cấu hình Odoo
+### 3.1. Tạo file odoo.conf
 
-```
+Tạo file odoo.conf tại thư mục gốc:
+
 [options]
 addons_path = addons
 db_host = localhost
-db_password = odoo
-db_user = odoo
 db_port = 5432
+db_user = odoo
+db_password = odoo
 xmlrpc_port = 8069
-```
-Có thể kế thừa từ **odoo.conf.template**
 
-Ngoài ra có thể thêm mổ số parameters như:
+### 3.2. Một số tham số chạy Odoo
+-c <đường_dẫn_odoo.conf>     # Chỉ định file config
+-d <tên_database>            # Database sử dụng
+-u <tên_module>              # Update module
+--dev=all                    # Bật developer mode
 
-```
--c _<đường dẫn đến tệp odoo.conf>_
--u _<tên addons>_ giúp cập nhật addons đó trước khi khởi chạy
--d _<tên database>_ giúp chỉ rõ tên database được sử dụng
---dev=all giúp bật chế độ nhà phát triển 
-```
+## 4️⃣ Chạy hệ thống
+source venv/bin/activate
+python odoo-bin -c odoo.conf
 
-# 4. Chạy hệ thống và cài đặt các ứng dụng cần thiết
+Truy cập trình duyệt:
 
-Người sử dụng truy cập theo đường dẫn _http://localhost:8069/_ để đăng nhập vào hệ thống.
+👉 http://localhost:8069
 
-Hoàn tất
-    
+## 5️⃣ Các module chính
+
+📦 quan_ly_nhan_su – Quản lý nhân viên
+
+📦 quan_ly_cong_viec – Quản lý dự án, công việc, nhật ký
+
+📦 quan_ly_khach_hang – Quản lý khách hàng
+
+## POSTER:
