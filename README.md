@@ -1,12 +1,16 @@
 # 📌 HỆ THỐNG QUẢN LÝ DOANH NGHIỆP TRÊN ODOO  
 **(Quản lý Nhân sự – Quản lý Công việc – Quản lý Khách hàng)**
 
-![Ubuntu](https://img.shields.io/badge/Ubuntu-22.04-E95420?style=for-the-badge&logo=ubuntu&logoColor=white)
-![GitHub](https://img.shields.io/badge/github-%23181717.svg?style=for-the-badge&logo=github&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-14-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)
+<p align="center">
+  <img src="https://img.shields.io/badge/Ubuntu-22.04-E95420?style=for-the-badge&logo=ubuntu&logoColor=white" />
+  <img src="https://img.shields.io/badge/github-%23181717.svg?style=for-the-badge&logo=github&logoColor=white" />
+  <img src="https://img.shields.io/badge/PostgreSQL-14-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white" />
+</p>
 
-![Python](https://img.shields.io/badge/python-3.10+-blue.svg)
-![Odoo](https://img.shields.io/badge/Odoo-15%2F16-purple.svg)
+<p align="center">
+  <img src="https://img.shields.io/badge/python-3.10+-blue.svg" />
+  <img src="https://img.shields.io/badge/Odoo-15%2F16-purple.svg" />
+</p>
 
 ---
 
@@ -98,5 +102,6 @@ Truy cập trình duyệt:
 </p>
 
 ## END.
+
 
 
