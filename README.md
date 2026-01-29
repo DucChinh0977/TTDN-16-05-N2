@@ -1,6 +1,4 @@
-<p align="center">
 # 📌 HỆ THỐNG QUẢN LÝ DOANH NGHIỆP TRÊN ODOO  
-</p>
 
 <p align="center">
 **(Quản lý Nhân sự – Quản lý Công việc – Quản lý Khách hàng)**
@@ -107,6 +105,7 @@ Truy cập trình duyệt:
 </p>
 
 ## END.
+
 
 
 
