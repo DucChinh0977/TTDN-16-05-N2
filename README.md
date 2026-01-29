@@ -93,4 +93,6 @@ Truy cập trình duyệt:
 
 ## POSTER:
 
-### /Slide1.PNG
+<p align="center">
+  <img src="/Slide1.png" width="800"/>
+</p>
