@@ -92,3 +92,5 @@ Truy cập trình duyệt:
 📦 quan_ly_khach_hang – Quản lý khách hàng
 
 ## POSTER:
+
+### /Slide1.PNG
