@@ -1,0 +1,58 @@
+<!-- views/nhan_vien_view.xml -->
+<odoo>
+
+    <!-- TREE VIEW -->
+    <record id="view_nhan_vien_tree" model="ir.ui.view">
+        <field name="name">nhan.vien.tree</field>
+        <field name="model">quan_ly_nhan_su.nhan_vien</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="ma_nhan_vien"/>
+                <field name="name"/>
+                <field name="job_title"/>
+                <field name="department"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- FORM VIEW -->
+    <record id="view_nhan_vien_form" model="ir.ui.view">
+        <field name="name">nhan.vien.form</field>
+        <field name="model">quan_ly_nhan_su.nhan_vien</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="ma_nhan_vien"/>
+                        <field name="name"/>
+                        <field name="job_title"/>
+                        <field name="department"/>
+                        <field name="active"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- ACTION (BẮT BUỘC) -->
+    <record id="action_nhan_vien" model="ir.actions.act_window">
+        <field name="name">Nhân viên</field>
+        <field name="res_model">quan_ly_nhan_su.nhan_vien</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- MENU ROOT -->
+    <menuitem
+        id="menu_quan_ly_nhan_su_root"
+        name="Quản lý nhân sự"
+        sequence="10"/>
+
+    <!-- MENU NHÂN VIÊN -->
+    <menuitem
+        id="menu_nhan_vien"
+        name="Nhân viên"
+        parent="menu_quan_ly_nhan_su_root"
+        action="action_nhan_vien"
+        sequence="10"/>
+
+</odoo>

@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
+
+# Odoo
+*.pot
+*.mo
+*.swp
+.odoo-cache/
+.session/
+*.db
+*.sqlite3
+
+# Virtualenv
+venv/
+.env/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
