@@ -101,10 +101,11 @@ Truy cập trình duyệt:
 ## 6 POSTER:
 
 <p align="center">
-  <img src="/Slide1.jpg" width="800"/>
+  <img src="/Slide1.PNG" width="800"/>
 </p>
 
 ## END.
+
 
 
 
